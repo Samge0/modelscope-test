@@ -15,15 +15,15 @@ class DemoBase:
     
     @abstractmethod
     def get_test_texts(self) -> list:
-        raise NotImplementedError(f'{self.__class__.__name__}.{inspect.stack()[1][2]} method is not defined')
+        raise NotImplementedError(f'{self.__class__.__name__}.{inspect.stack()[1][3]} method is not defined')
     
     @abstractmethod
     def load_model(self):
-        raise NotImplementedError(f'{self.__class__.__name__}.{inspect.stack()[1][2]} method is not defined')
+        raise NotImplementedError(f'{self.__class__.__name__}.{inspect.stack()[1][3]} method is not defined')
     
     @abstractmethod
     def gen_result(self, model_obj, input_text):
-        raise NotImplementedError(f'{self.__class__.__name__}.{inspect.stack()[1][2]} method is not defined')
+        raise NotImplementedError(f'{self.__class__.__name__}.{inspect.stack()[1][3]} method is not defined')
     
     # 执行任务
     def do_task(self):
