@@ -13,9 +13,10 @@ import configs
 
 class DemoBase:
     
-    @abstractmethod
     def get_test_texts(self) -> list:
-        raise NotImplementedError(f'{self.__class__.__name__}.{inspect.stack()[1][3]} method is not defined')
+        return [
+            "这是测试的文本，如需自定义，请复写 get_test_texts 函数"
+        ]
     
     @abstractmethod
     def load_model(self):
