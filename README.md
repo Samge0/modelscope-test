@@ -1,5 +1,5 @@
 ## 魔塔社区cpu版模型测试
-
+[点击前往魔塔社区>>](https://modelscope.cn/models)
 
 ### 创建conda环境
 ```shell
