@@ -19,7 +19,7 @@ class Demo(DemoBase):
         ]
         
     @timeutils.monitor
-    def load_model(self):
+    def load_model(self, model_name=None):
         from modelscope.pipelines import pipeline
         from modelscope.utils.constant import Tasks
         semantic_cls = pipeline(Tasks.text_classification, 'damo/nlp_structbert_emotion-classification_chinese-tiny', model_revision='v1.0.0', device=configs.DEVICE)

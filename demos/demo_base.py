@@ -18,10 +18,16 @@ class DemoBase:
             "这是测试的文本，如需自定义，请复写 get_test_texts 函数"
         ]
     
+    # 获取模型列表，如果模型列表大于1，在终端交互模式下则提示选择模型。【子类可选择实现】
+    def get_models() -> list:
+        return []
+    
+    # 加载模型【需要子类实现】
     @abstractmethod
-    def load_model(self):
+    def load_model(self, model_name=None):
         raise NotImplementedError(f'{self.__class__.__name__}.{inspect.stack()[1][3]} method is not defined')
     
+    # 获取推理结果【需要子类实现】
     @abstractmethod
     def gen_result(self, model_obj, input_text):
         raise NotImplementedError(f'{self.__class__.__name__}.{inspect.stack()[1][3]} method is not defined')

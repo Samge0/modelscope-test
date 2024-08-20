@@ -6,8 +6,6 @@
 
 
 import configs
-from demos import 情感分析, 命名实体识别_中文通用
-
 
 # 终端提示文本
 terminal_tip = f"""请选择要执行的任务：
