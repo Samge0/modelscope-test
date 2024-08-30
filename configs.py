@@ -6,7 +6,7 @@
 
 import torch
 
-from demos import 情感分析, 命名实体识别_中文通用
+from demos import 情感分析, 命名实体识别_中文通用, RoBERTa关系抽取_中文_通用
 
 
 # 是否使用终端交互模式
@@ -21,6 +21,7 @@ DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 COMMAND_MAP = {
     '0': 情感分析,
     '1': 命名实体识别_中文通用,
+    '2': RoBERTa关系抽取_中文_通用,
 }
 
 # 命令提示文本
